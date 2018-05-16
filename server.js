@@ -8,43 +8,40 @@ app.use(cors({
   origin: '*'
 }));
 
-app.get('/test', async (req, res) => {
-  const send = data => res.write(JSON.stringify(data));
-
-  res.setHeader('Content-Type', 'application/json');
-  send({
+const data = [
+  {
     id: 1,
     name: 'Carlos'
-  });
-  await wait(900);
-
-  send({
+  },
+  {
     id: 2,
     name: 'Maria'
-  });
-  await wait(300);
-
-  send({
+  },
+  {
     id: 3,
     name: 'Yung Bidness'
-  });
-  await wait(2000);
-
-  send({
+  },
+  {
     id: 4,
     name: 'Sara'
-  });
-  await wait(400);
-
-  send({
+  },
+  {
     id: 5,
     name: 'Milipnos'
-  });
-  await wait(1000);
-
-  send({
+  },
+  {
     id: 6,
     name: 'Montana'
+  }
+];
+
+app.get('/test', async (req, res) => {
+  const send = data => res.write(JSON.stringify(data));
+  res.setHeader('Content-Type', 'application/json');
+
+  data.forEach(async item => {
+    send(item);
+    await wait(Math.random() * 2000);
   });
   res.end();
 });
