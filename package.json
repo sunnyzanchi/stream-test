@@ -1,0 +1,24 @@
+{
+  "name": "stream-test",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:client": "serve -p 3000 ./client",
+    "start:server": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Zanchi <emzanchi@gmail.com> (https://github.com/zanchi)",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-gsandf": "^1.0.0",
+    "nodemon": "^1.17.4",
+    "serve": "^6.5.7"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cors": "^2.8.4",
+    "express": "^4.16.3"
+  }
+}

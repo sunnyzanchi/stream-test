@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    @keyframes loading {
+      from {
+        transform: translate(0);
+      }
+      to {
+        transform: translate(50px);
+      }
+    }
+    .loader {
+      --radius: 6px;
+      animation: .8s ease-in-out loading infinite alternate-reverse;
+      background-color: coral;
+      border-radius: 50%;
+      height: var(--radius);
+      width: var(--radius);
+    }
+  </style>
+</head>
+<body>
+  <div class="loader" id="loader"></div>
+  <ul id="list"></ul>
+  <script src="index.js"></script>
+</body>
+</html>
