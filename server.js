@@ -39,10 +39,11 @@ app.get('/test', async (req, res) => {
   const send = data => res.write(JSON.stringify(data));
   res.setHeader('Content-Type', 'application/json');
 
-  data.forEach(async item => {
+  for (const item of data) {
     send(item);
-    await wait(Math.random() * 2000);
-  });
+    await wait(500);
+  }
+
   res.end();
 });
 
