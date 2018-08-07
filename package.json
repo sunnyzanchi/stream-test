@@ -14,7 +14,7 @@
     "eslint": "^4.19.1",
     "eslint-config-gsandf": "^1.0.0",
     "nodemon": "^1.17.4",
-    "serve": "^6.5.7"
+    "serve": "^9.4.0"
   },
   "dependencies": {
     "cors": "^2.8.4",
